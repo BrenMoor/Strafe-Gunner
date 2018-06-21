@@ -126,6 +126,7 @@ namespace Strafe_Gunner
             {
                 Box.Add(new Rectangle(xBox[i], yBox[i], 50, 50));
             }
+            Form1.service.startGame();
         }
         private void GameScreen_Paint(object sender, PaintEventArgs e)
         {
@@ -257,7 +258,7 @@ namespace Strafe_Gunner
                 gs.Controls.Add(es);
                 es.Focus();
                 es.Location = new Point((Screen.PrimaryScreen.Bounds.Width - es.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - es.Height) / 2);
-
+                Form1.service.endGame();
             }
             if (player1Score == 3)
             {
@@ -269,7 +270,7 @@ namespace Strafe_Gunner
                 gs.Controls.Add(es2);
                 es2.Focus();
                 es2.Location = new Point((Screen.PrimaryScreen.Bounds.Width - es2.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - es2.Height) / 2);
-
+                Form1.service.endGame();
             }
             if (Countdown == 0)
             {

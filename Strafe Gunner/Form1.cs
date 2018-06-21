@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using GameSystemServices;
 
 namespace Strafe_Gunner
 {
     public partial class Form1 : Form
     {
+        const string gameToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnYW1lSWQiOiI1YjJiZDhmNDUwZTRiODIxZDYxNzg1MjgiLCJjYXJkSWQiOiIxIiwiaWF0IjoxNTI5NjAwMzI1fQ.mVdQG0Ay6ykv6FJtxdcKFSEluDnaUQLZ2k5ou1kFQ08";
+        public static Service service = new Service(Environment.GetCommandLineArgs(), gameToken);
         SoundPlayer music = new SoundPlayer(Properties.Resources.BACKGROUNDMUSIC);
 
         public Form1()

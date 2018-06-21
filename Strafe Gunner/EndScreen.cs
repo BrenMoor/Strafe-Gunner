@@ -24,7 +24,13 @@ namespace Strafe_Gunner
             switch (e.KeyCode)
             {
                 case Keys.Escape:
-                    Application.Exit();
+                    Form f = this.FindForm();
+                    f.Controls.Remove(this);
+
+                    HomePage hp = new HomePage();
+                    f.Controls.Add(hp);
+                    hp.Focus();
+
                     break;
             }
         }
